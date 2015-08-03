@@ -1,0 +1,88 @@
+package com.seu.yoyoschoolbeta.core;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.seu.yoyoschoolbeta.service.UserService;
+import com.seu.yoyoschoolbeta.sharedata.StaticData;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class DemoActivity extends Activity {
+
+	private EditText nameEdt = null;
+	private EditText pwdEdt = null;
+	private Button loginBtn = null;
+
+	private String url = StaticData.SEEVER_BASE_URL + "login.json";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_demo);
+
+		bindView();
+
+		loginBtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				userLogin(nameEdt.getText().toString(), pwdEdt.getText().toString(), url);
+			}
+		});
+
+	}
+
+	private void bindView() {
+		nameEdt = (EditText) findViewById(R.id.demo_name);
+		pwdEdt = (EditText) findViewById(R.id.demo_password);
+		loginBtn = (Button) findViewById(R.id.demo_login);
+	}
+
+	private void userLogin(String name, String password, String url) {
+		RequestQueue mQue = Volley.newRequestQueue(this);
+		Map<String, String> appendHeader = new HashMap<String, String>();
+		appendHeader.put("name", name);
+		appendHeader.put("password", password);
+
+		JsonObjectRequest mJsonObjectRequest = new JsonObjectRequest(url,
+				new JSONObject(appendHeader),
+				new Response.Listener<JSONObject>() {
+					@Override
+					public void onResponse(JSONObject response) {
+						System.out.println(response.toString());
+						// 登陆请求发送成功，解析返回结果
+						try {
+							String flag = response.getString("flag");
+							Toast.makeText(DemoActivity.this, flag, 1000).show();
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+					}
+				}, new Response.ErrorListener() {
+					@Override
+					public void onErrorResponse(VolleyError error) {
+						// 网络问题登陆失败
+						Toast.makeText(DemoActivity.this, "连接服务器失败，请检查您的网络环境",
+								Toast.LENGTH_SHORT).show();
+					}
+				});
+		mQue.add(mJsonObjectRequest);
+	}
+}
