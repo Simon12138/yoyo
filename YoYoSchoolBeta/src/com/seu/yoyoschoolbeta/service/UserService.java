@@ -19,7 +19,7 @@ import com.seu.yoyoschoolbeta.service.impl.UserServiceImpl;
 public class UserService implements UserServiceImpl {
 	private Context context = null;
 	private RequestQueue mQue = null;
-	private boolean loginResult = false;//¼ì²âµÇÂ½×´Ì¬
+	private boolean loginResult = false;//æ£€æŸ¥ç™»é™†ç»“æžœ
 
 	public UserService(Context context) {
 		this.context = context;
@@ -47,7 +47,7 @@ public class UserService implements UserServiceImpl {
 					@Override
 					public void onResponse(JSONObject response) {
 						System.out.println(response.toString());
-						// µÇÂ½ÇëÇó·¢ËÍ³É¹¦£¬½âÎö·µ»Ø½á¹û
+						// ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½Í³É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø½ï¿½ï¿½
 						try {
 							String flag = response.getString("flag");
 							if(flag.equals("success")){
@@ -60,8 +60,8 @@ public class UserService implements UserServiceImpl {
 				}, new Response.ErrorListener() {
 					@Override
 					public void onErrorResponse(VolleyError error) {
-						// ÍøÂçÎÊÌâµÇÂ½Ê§°Ü
-						Toast.makeText(context, "Á¬½Ó·þÎñÆ÷Ê§°Ü£¬Çë¼ì²éÄúµÄÍøÂç»·¾³",
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½Ê§ï¿½ï¿½
+						Toast.makeText(context, "ï¿½ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç»·ï¿½ï¿½",
 								Toast.LENGTH_SHORT).show();
 						loginResult = false;
 					}

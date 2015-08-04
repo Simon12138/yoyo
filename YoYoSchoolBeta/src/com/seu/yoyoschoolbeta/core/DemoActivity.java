@@ -11,13 +11,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.seu.yoyoschoolbeta.service.UserService;
 import com.seu.yoyoschoolbeta.sharedata.StaticData;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -67,7 +64,7 @@ public class DemoActivity extends Activity {
 					@Override
 					public void onResponse(JSONObject response) {
 						System.out.println(response.toString());
-						// µÇÂ½ÇëÇó·¢ËÍ³É¹¦£¬½âÎö·µ»Ø½á¹û
+						//è¿æ¥æœåŠ¡å™¨æˆåŠŸè¿”å›
 						try {
 							String flag = response.getString("flag");
 							Toast.makeText(DemoActivity.this, flag, 1000).show();
@@ -78,8 +75,7 @@ public class DemoActivity extends Activity {
 				}, new Response.ErrorListener() {
 					@Override
 					public void onErrorResponse(VolleyError error) {
-						// ÍøÂçÎÊÌâµÇÂ½Ê§°Ü
-						Toast.makeText(DemoActivity.this, "Á¬½Ó·şÎñÆ÷Ê§°Ü£¬Çë¼ì²éÄúµÄÍøÂç»·¾³",
+						Toast.makeText(DemoActivity.this, "ç½‘ç»œè¿æ¥å¤±è´¥ï¼Œæ£€æŸ¥ç½‘ç»œ",
 								Toast.LENGTH_SHORT).show();
 					}
 				});

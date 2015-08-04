@@ -3,10 +3,10 @@ package com.seu.yoyoschoolbeta.sharedata;
 import android.R.bool;
 
 public class StaticData {
-	//¸ÃjavaÎÄ¼şÓÃÓÚ»ñÈ¡È«¾Ö¾²Ì¬±äÁ¿£¬±äÁ¿Ãû¾¡Á¿´óĞ´£¬Ã¿¸ö±äÁ¿¶¼ÒªÓĞ×¢ÊÍ
-	public static int UID = 1;//²âÊÔÓÃ»§ID
-	public static String NAME = "admin";//²âÊÔÓÃ»§Ãû
-	public static String PASSWORD = "admin";//²âÊÔÓÃ»§ÃÜÂë
+	//é™æ€å˜é‡ä¸€å¾‹å¤§å†™
+	public static int UID = 1;//æµ‹è¯•ç”¨æˆ·ID
+	public static String NAME = "admin";//æµ‹è¯•ç”¨æˆ·å
+	public static String PASSWORD = "admin";//æµ‹è¯•ç”¨æˆ·å¯†ç 
 	
 	public static String IP = "192.168.12.161";
 	public static String PORT = "8080";
