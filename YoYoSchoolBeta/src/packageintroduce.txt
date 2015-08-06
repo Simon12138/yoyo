@@ -1,0 +1,9 @@
+adapter 是适配器重写的包
+core 是Activity的包
+entity 是实体的包，在GSON的时候会用到
+sharedata 是共享数据包
+util 是工具包
+volley 是volley框架包
+view 是自定义控件和View包
+
+如果自己还有其他的需求，可以自己创建包

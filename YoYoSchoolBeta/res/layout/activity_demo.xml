@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.seu.yoyoschoolbeta.core.DemoActivity" >
+
+    <EditText
+        android:id="@+id/demo_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textSize="17sp" />
+    
+    <EditText
+        android:id="@+id/demo_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textSize="17sp" />
+    
+    <Button
+        android:id="@+id/demo_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="Login"
+        android:textSize="20sp" />
+
+</LinearLayout>
