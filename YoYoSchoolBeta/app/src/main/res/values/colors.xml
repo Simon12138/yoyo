@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent_background">#30000000</color>
+    <!-- 前两位为透明度设置 00-99 透明-不透明 后6位为颜色设置 -->
+    <color name="yellow">#F6BA5A</color>
+    <color name="red">#FF5001</color>
+    <color name="gray">#808080</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="nearwhite">#93E3DC</color>
+    <color name="orange_color">#f7ba5b</color>
+    <color name="blue_color">#7ecef4</color>
+    <color name="red_color">#f78e57</color>
+    <color name="tab_color">#dcdcdc</color>
+
+
+
+
+
+    <color name="gainboro">#DCDCDC</color>
+    <color name="main_color">#06C1AE</color>
+    <color name="background">#EFEEEE</color>
+    <color name="dialog_white_bg">#fbfbfb</color>
+    <color name="person_sign_color">#B1B1B1</color>
+    <color name="point_color">#767676</color>
+    <color name="point_name_color">#B2B2B2</color>
+    <color name="person_info_color">#666666</color>
+    <color name="line">#cccccc</color>
+    <color name="up_text">#666666</color>
+    <color name="up_text_undo">#999999</color>
+    <color name="tabs_e_b_color">#ffffff</color>
+    <color name="tabs_e_t_color">#444444</color>
+    <color name="tabs_s_b_color">#dddddd</color>
+    <color name="tabs_s_t_color">#888888</color>
+    <color name="price_color">#ff914e</color>
+    <color name="view_color">#555555</color>
+    <color name="time_color">#888888</color>
+    <color name="main_btn_press_color">#2baa9d</color>
+    <color name="yellow_btn_press_color">#f6ac3a</color>
+    <color name="main_tab_color_pressed">#29d0bf</color>
+    <color name="main_tab_color_formal">#1dcab7</color>
+    <color name="bottom_text_color">#a7a7a7</color>
+    <color name="login_bg">#F6F6F6</color>
+</resources>
